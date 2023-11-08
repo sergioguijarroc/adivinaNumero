@@ -9,7 +9,7 @@ def home(request):
 
 def guess(request):
     numeroRandom = random.randint(1, 10)
-    respuestaUsuario = int(request.POST["guess"])
+    respuestaUsuario = int(request.POST["numero"])
     message = "Respuesta errónea"
     if numeroRandom == respuestaUsuario:
         message = "Has acertado!"

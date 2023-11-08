@@ -6,8 +6,10 @@
   <body>
     <h1>Bienvenido!, mete un número del 1 al 10 y prueba suerte</h1>
     <form action="{% url 'guess'%}" method="post">
+      <!--Aquí mandamos mediante post a la url guess, que va a la vista guess-->
       {% csrf_token %}
-      <input type="number" name="guess" required />
+      <!--Importante meter el token para cuestiones de seguridad-->
+      <input type="number" name="numero" required />
       <button type="submit">Probar</button>
     </form>
   </body>
